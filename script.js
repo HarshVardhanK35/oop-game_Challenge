@@ -4,14 +4,14 @@ function Player (name){
   this.points = 0
 }
 
-Player.prototype.gainXp(xp){
+Player.prototype.gainXp = function(xp){
   this.points = this.points + 1;
 
   if(this.points >= 10){
     this.lvl = this.lvl + 1;
     this.points = this.points - 10;
   }
-}
+};
 
 Player.prototype.describe = function( ){
   return (`${this.name} is at level - ${this.lvl} with points ${this.points}`)
@@ -31,3 +31,5 @@ player2.gainXp(7)
 player1.gainXp(2)
 player2.gainXp(4)
 
+console.log(player1.describe());
+console.log(player2.describe())
