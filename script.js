@@ -11,6 +11,9 @@ Player.prototype.gainXp = function(xp){
     this.lvl = this.lvl + 1;
     this.points = this.points - 10;
   }
+
+  // ---------------------- Abstraction
+  console.log(this.describe())
 };
 
 Player.prototype.describe = function( ){
@@ -31,5 +34,6 @@ player2.gainXp(7)
 player1.gainXp(2)
 player2.gainXp(4)
 
-console.log(player1.describe());
-console.log(player2.describe())
+// These are removed to put abstraction functionality
+// console.log(player1.describe());
+// console.log(player2.describe())
